@@ -3,8 +3,13 @@ package com.rs.dojo.model.operadoras;
 import java.math.BigDecimal;
 
 public class Operadora {
-	
-	private Bandeira bandeira;
+
+	/**
+	 * V - Visa
+	 * M - Master
+	 * S - Sodexo
+	 */
+	private String bandeira;
 	private Boolean anuidadeVisa;
 	private Boolean liberacaoTaxaMaster;
 	/**
@@ -14,10 +19,10 @@ public class Operadora {
 	private Integer tipoCartaoSodexo;
 	private BigDecimal taxaPagamento;
 	
-	public Bandeira getBandeira() {
+	public String getBandeira() {
 		return bandeira;
 	}
-	public void setBandeira(Bandeira bandeira) {
+	public void setBandeira(String bandeira) {
 		this.bandeira = bandeira;
 	}
 	public Boolean getAnuidadeVisa() {

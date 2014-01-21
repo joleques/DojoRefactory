@@ -1,6 +1,5 @@
 package com.rs.dojo.model.operadoras;
 
-import static com.rs.dojo.model.operadoras.Bandeira.*;
 
 import java.math.BigDecimal;
 
@@ -14,9 +13,9 @@ public class CadastroOperadora {
 		this.servicoLegado = servicoLegado;
 	}
 
-	public void cadastrarVisa(Operadora visa) throws ExcecaoNegocio{
-		if(!visa.getBandeira().equals(VISA))
-			throw new ExcecaoNegocio("Não eh operadora visa");
+	public boolean cadastrarVisa(Operadora visa){
+		if(!visa.getBandeira().equals("V"))
+			return false;
 		BigDecimal taxaPagamento = new BigDecimal(0);
 		if(visa.getAnuidadeVisa()){
 			//para quem possuir plano anual não eh cobrado a taxa adicional da empresa
@@ -27,12 +26,13 @@ public class CadastroOperadora {
 		}
 		visa.setTaxaPagamento(taxaPagamento);
 		servicoLegado.cadastrarOperadora(visa);
+		return true;
 	}
 	
 
-	public void cadastrarMaster(Operadora master) throws ExcecaoNegocio{
-		if(!master.getBandeira().equals(MASTER))
-			throw new ExcecaoNegocio("Não eh operadora master");
+	public boolean cadastrarMaster(Operadora master){
+		if(!master.getBandeira().equals("M"))
+			return false;
 		BigDecimal taxaPagamento = new BigDecimal(0);
 		if(!master.getLiberacaoTaxaMaster()){
 			// se não possuir liberação da taxa é cobrada a taxa com o adicional da empresa
@@ -40,13 +40,14 @@ public class CadastroOperadora {
 		}
 		master.setTaxaPagamento(taxaPagamento);
 		servicoLegado.cadastrarOperadora(master);
+		return true;
 	}
 	
 
 
-	public void cadastrarSodexo(Operadora sodexo) throws ExcecaoNegocio{
-		if(!sodexo.getBandeira().equals(SODEXO))
-			throw new ExcecaoNegocio("Não eh operadora sodexo");
+	public boolean cadastrarSodexo(Operadora sodexo){
+		if(!sodexo.getBandeira().equals("S"))
+			return false;
 		BigDecimal taxaPagamento = new BigDecimal(0);
 		if(sodexo.getTipoCartaoSodexo().equals(1)){
 			//a taxa é igual ao valor da adesão mais taxa da empresa
@@ -58,10 +59,11 @@ public class CadastroOperadora {
 			//a taxa é igual ao valor da adesão mais taxa da empresa
 			taxaPagamento = new BigDecimal(5.5).add(new BigDecimal(1.5));
 		}else{
-			throw new ExcecaoNegocio("Tipo de vale invalido!");
+			return false;
 		}
 		sodexo.setTaxaPagamento(taxaPagamento);
 		servicoLegado.cadastrarOperadora(sodexo);
+		return true;
 	}
 
 }
