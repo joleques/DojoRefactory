@@ -6,6 +6,10 @@ import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
 
+import com.rs.dojo.model.helper.Cartao;
+import com.rs.dojo.model.helper.Helper;
+import com.rs.dojo.model.helper.PessoaFisica;
+
 
 public class HelperTest {
 
