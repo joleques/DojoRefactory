@@ -1,4 +1,4 @@
-package com.rs.dojo.model.strategy.operadoras;
+package com.rs.dojo.model.strategy.problema;
 
 import java.math.BigDecimal;
 

@@ -1,4 +1,4 @@
-package com.rs.dojo.model.strategy.operadoras;
+package com.rs.dojo.model.strategy.problema;
 
 import java.math.BigDecimal;
 
@@ -9,9 +9,9 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.Mock;
 
-import com.rs.dojo.model.strategy.operadoras.CadastroOperadora;
-import com.rs.dojo.model.strategy.operadoras.Operadora;
-import com.rs.dojo.model.strategy.operadoras.ServicoLegado;
+import com.rs.dojo.model.strategy.problema.CadastroOperadora;
+import com.rs.dojo.model.strategy.problema.Operadora;
+import com.rs.dojo.model.strategy.problema.ServicoLegado;
 
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.verify;
