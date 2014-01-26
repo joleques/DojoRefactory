@@ -9,6 +9,10 @@ import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.Mock;
 
+import com.rs.dojo.model.strategy.operadoras.CadastroOperadora;
+import com.rs.dojo.model.strategy.operadoras.Operadora;
+import com.rs.dojo.model.strategy.operadoras.ServicoLegado;
+
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.verify;
 import static org.mockito.MockitoAnnotations.*;

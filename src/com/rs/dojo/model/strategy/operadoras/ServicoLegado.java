@@ -1,4 +1,4 @@
-package com.rs.dojo.model.operadoras;
+package com.rs.dojo.model.strategy.operadoras;
 
 public class ServicoLegado {
 
