@@ -16,7 +16,6 @@ import com.rs.dojo.model.strategy.ideal.ServicoLegado;
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.verify;
 import static org.mockito.MockitoAnnotations.*;
-import static com.rs.dojo.model.strategy.ideal.Bandeira.*;
 
 public class CadastroOperadoraTest {
 
