@@ -2,7 +2,7 @@ package com.rs.dojo.model.strategy.ideal;
 
 import java.math.BigDecimal;
 
-public class OperadoraSodexo extends Operadora implements CalculoTaxa {
+public class OperadoraSodexo extends Operadora{
 
 	/**
 	 * 1 - Alimentação

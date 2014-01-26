@@ -10,13 +10,13 @@ public class CadastroOperadora {
 		this.servicoLegado = servicoLegado;
 	}
 
-	public boolean cadastrar(CalculoTaxa operadora){
+	public boolean cadastrar(Operadora operadora){
 		try {
 			operadora.calcularTaxa();
 		} catch (ExcpetionNegocio e) {
 			return false;
 		}
-		servicoLegado.cadastrarOperadora((Operadora)operadora);
+		servicoLegado.cadastrarOperadora(operadora);
 		return true;
 	}
 

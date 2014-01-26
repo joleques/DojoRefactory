@@ -2,7 +2,7 @@ package com.rs.dojo.model.strategy.ideal;
 
 import java.math.BigDecimal;
 
-public class OperadoraVisa extends Operadora implements CalculoTaxa{
+public class OperadoraVisa extends Operadora{
 
 	private Boolean anuidadeVisa;
 	

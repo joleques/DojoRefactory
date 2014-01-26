@@ -2,7 +2,7 @@ package com.rs.dojo.model.strategy.ideal;
 
 import java.math.BigDecimal;
 
-public class Operadora {
+public abstract class Operadora  {
 
 	private BigDecimal taxaPagamento = new BigDecimal(0);
 	
@@ -13,4 +13,6 @@ public class Operadora {
 	public BigDecimal getTaxaPagamento() {
 		return taxaPagamento;
 	}
+	
+	public abstract void calcularTaxa() throws ExcpetionNegocio;
 }
