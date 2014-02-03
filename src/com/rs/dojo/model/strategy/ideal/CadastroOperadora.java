@@ -4,9 +4,9 @@ package com.rs.dojo.model.strategy.ideal;
 
 public class CadastroOperadora {
 	
-	private ServicoLegado servicoLegado;
+	private OperadoraDAO servicoLegado;
 	
-	public CadastroOperadora(ServicoLegado servicoLegado) {
+	public CadastroOperadora(OperadoraDAO servicoLegado) {
 		this.servicoLegado = servicoLegado;
 	}
 

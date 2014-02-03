@@ -11,7 +11,7 @@ import org.mockito.Mock;
 
 import com.rs.dojo.model.strategy.ideal.CadastroOperadora;
 import com.rs.dojo.model.strategy.ideal.Operadora;
-import com.rs.dojo.model.strategy.ideal.ServicoLegado;
+import com.rs.dojo.model.strategy.ideal.OperadoraDAO;
 
 import static org.mockito.Mockito.atLeastOnce;
 import static org.mockito.Mockito.verify;
@@ -21,7 +21,7 @@ public class CadastroOperadoraTest {
 
 	private CadastroOperadora cadastroOperadora;
 	@Mock
-	private ServicoLegado servicoLegado;
+	private OperadoraDAO servicoLegado;
 	@Captor
 	private ArgumentCaptor<Operadora> operadoraCaptor;
 
